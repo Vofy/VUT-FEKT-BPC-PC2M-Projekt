@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <gtk/gtk.h>
 #include "types.h"
+#include "dataio.h"
 #include "ui/main_window.h"
 
 // gnome-terminal --title=$TITLE -x
@@ -10,14 +11,13 @@
 
 dataset_t* dataset = NULL;
 
+
 int main (int argc, char **argv)
 {
     dataset = malloc(sizeof(dataset_t));
 
     gtk_init(&argc, &argv);
-
     main_window_show();
-
     gtk_main();
 
     return 0;
