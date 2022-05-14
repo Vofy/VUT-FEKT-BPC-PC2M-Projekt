@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="projekt" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/projekt" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="`pkg-config --cflags --libs gtk+-3.0`" />
+					<Add option="-rdynamic" />
+				</Compiler>
+				<Linker>
+					<Add option="`pkg-config --cflags --libs gtk+-3.0`" />
+					<Add option="-rdynamic" />
+					<Add option="-lm" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/projekt" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="`pkg-config --cflags --libs gtk+-3.0`" />
+					<Add option="-rdynamic" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="`pkg-config --cflags --libs gtk+-3.0`" />
+					<Add option="-rdynamic" />
+					<Add option="-lm" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`pkg-config --cflags --libs gtk+-3.0`" />
+			<Add option="-rdynamic" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config --cflags --libs gtk+-3.0`" />
+			<Add option="-rdynamic" />
+			<Add option="-lm" />
+		</Linker>
+		<Unit filename="lib/gnuplot_i/src/gnuplot_i.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib/gnuplot_i/src/gnuplot_i.h" />
+		<Unit filename="src/calculations.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/calculations.h" />
+		<Unit filename="src/dataio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/dataio.h" />
+		<Unit filename="src/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/plots.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/plots.h" />
+		<Unit filename="src/smoothing.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/smoothing.h" />
+		<Unit filename="src/types.h" />
+		<Unit filename="src/ui/main_window.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui/main_window.h" />
+		<Unit filename="src/ui/smoothing/moving_average_window.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui/smoothing/moving_average_window.h" />
+		<Unit filename="src/ui/smoothing/moving_median_window.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui/smoothing/moving_median_window.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
