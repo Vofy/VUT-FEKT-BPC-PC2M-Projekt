@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <gtk/gtk.h>
 #include "types.h"
-#include "dataio.h"
 #include "ui/main_window.h"
 
 // gnome-terminal --title=$TITLE -x
